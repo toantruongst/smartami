@@ -1,0 +1,440 @@
+
+<div class="container">
+    <div class="panel">
+        <img src="/images/banner.jpg"  style="width:100%;height:50%;border:0;" class="img-responsive">
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4><i class="fa fa-fw fa-gift"></i>Tiêu Thụ</h4>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+               <div class="col-lg-5" >
+                   <div id="chart_div" style="width: 500px; height: 300px;"></div>
+               </div>
+               <div class="col-lg-4">
+                   <div id="donutchart" style="width: 500px; height: 300px;"></div>
+               </div>
+                <div class="col-lg-3">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4><i class="fa fa-fw fa-check"></i>Bảng Điều khiển</h4>
+                        </div>
+                        <div class="panel-body">
+                            <h4>Công tắc 1:</h4>
+                            <div class="container">
+                                <input id="toggle-event" type="checkbox"  data-toggle="toggle" data-onstyle="primary">
+                                <a>-</a>
+                                <input id="toggle1-ct2" type="checkbox"  data-toggle="toggle" data-onstyle="success">
+                                <a>-</a>
+                                <input id="toggle1-ct3" type="checkbox"  data-toggle="toggle" data-onstyle="info">
+                                <div id="console-event"></div>
+                            </div>
+                            <br>
+
+                            <h4>Công tắc 2:</h4>
+                            <div class="container">
+
+                                <input id="toggle2-ct1" type="checkbox"   data-toggle="toggle" data-onstyle="primary">
+                                <a>-</a>
+                                <input id="toggle2-ct1" type="checkbox"   data-toggle="toggle" data-onstyle="success">
+                                <a>-</a>
+                                <input id="toggle2-ct1" type="checkbox"  data-toggle="toggle" data-onstyle="info">
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Điện áp</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="curve_chart" style="width: 100%; height: 100%"></div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4 class="text-success">CN1: <a class="text-danger" id="voltage-chanel1"></a> V</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN2: <a class="text-danger" id="voltage-chanel2"></a> V</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN3: <a class="text-danger" id="voltage-chanel3"></a> V</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h4><i class="fa fa-fw fa-gift"></i>Công suất</h4>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div id="power_chart" style="width: 100%; height: 100%"></div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4 class="text-success">CN1: <a class="text-danger" id="power-chanel1"></a> W</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN2: <a class="text-danger" id="power-chanel2"></a> W</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN3: <a class="text-danger" id="power-chanel3"></a> W</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i>Dòng Điện</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="current_chart" style="width: 100%; height: 100%"></div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4 class="text-success">CN1: <a class="text-danger" id="current-chanel1"></a> A</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN2: <a class="text-danger" id="current-chanel2"></a> A</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN3: <a class="text-danger" id="current-chanel3"></a> A</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-gift"></i>Tần số</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="hertz_chart" style="width: 100%; height: 100%"></div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h4 class="text-success">CN1: <a class="text-danger" id="hertz-chanel1"></a> Hz</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN2: <a class="text-danger" id="hertz-chanel2"></a> Hz</h4>
+                        </div>
+                        <div class="col-lg-4">
+                            <h4 class="text-success" >CN3: <a class="text-danger" id="hertz-chanel3"></a> Hz</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+
+</div>
+<script type="text/javascript">
+    var myVar = setInterval(myTimer, 1000);
+    var myVar1 = setInterval(drawChart_line, 60000);
+    var myVar2 = setInterval(drawChart_donut,80000);
+    var myVar3 = setInterval(drawVisualization, 90000);
+
+
+    //document.getElementById("demo1").innerHTML = thuti;
+    function myTimer() {
+        var thg = "Giờ: ";
+        var d = new Date();
+
+        document.getElementById("demo").innerHTML = thg + d.toLocaleTimeString();
+
+    }
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart_donut);
+    google.charts.setOnLoadCallback(drawChart_line);
+    google.charts.setOnLoadCallback(drawVisualization);
+
+    function drawChart_donut() {
+        var data1 = new google.visualization.DataTable();
+        var row_donut = new Array();
+        data1.addColumn('string','chanel');
+        data1.addColumn('number','value');
+        row_donut.push(['chanel1',{{rows_P.[29].[1]}}]);
+        row_donut.push(['chanel2',{{rows_P.[29].[2]}}]);
+        row_donut.push(['chanel3',{{rows_P.[29].[3]}}]);
+        data1.addRows(row_donut);
+        var options = {
+            title: 'Công suất theo ngày',
+            pieHole: 0.2
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data1, options);
+    }
+
+    function drawChart_line(){
+        var data = new google.visualization.DataTable();
+        var data1 = new google.visualization.DataTable();
+        var data2 = new google.visualization.DataTable();
+        var data3 = new google.visualization.DataTable();
+        var rows_chanelU = new Array();
+        var rows_chanelI = new Array();
+        var rows_chanelP = new Array();
+        var rows_chanelF = new Array();
+        var date = 0;
+        var ch1 = 0;
+        var ch2 = 0;
+        var ch3=0;
+        var d = new Date();
+
+        document.getElementById("voltage-chanel1").innerHTML = {{rows_U.[29].[1]}}//vol1;
+        document.getElementById("voltage-chanel2").innerHTML = {{rows_U.[29].[2]}}//vol2;
+        document.getElementById("voltage-chanel3").innerHTML = {{rows_U.[29].[3]}}//vol3;
+        document.getElementById("current-chanel1").innerHTML = {{rows_I.[29].[1]}}//cur1;
+        document.getElementById("current-chanel2").innerHTML = {{rows_I.[29].[2]}}//cur2;
+        document.getElementById("current-chanel3").innerHTML = {{rows_I.[29].[3]}}//cur3;
+        document.getElementById("power-chanel1").innerHTML = {{rows_P.[29].[1]}}//po1;
+        document.getElementById("power-chanel2").innerHTML = {{rows_P.[29].[2]}}//po2;
+        document.getElementById("power-chanel3").innerHTML = {{rows_P.[29].[3]}}//po3;
+        document.getElementById("hertz-chanel1").innerHTML = {{rows_F.[29].[1]}}//(50+random).toPrecision(4);
+        document.getElementById("hertz-chanel2").innerHTML = {{rows_F.[29].[2]}}//(50+random1).toPrecision(4);
+        document.getElementById("hertz-chanel3").innerHTML = {{rows_F.[29].[3]}}//(50+random2).toPrecision(4);
+        data.addColumn('string', 'Minute' );
+        data.addColumn('number', 'Chanel1');
+        data.addColumn('number', 'Chanel2');
+        data.addColumn('number', 'Chanel3');
+
+        data1.addColumn('string', 'Minute' );
+        data1.addColumn('number', 'Chanel1');
+        data1.addColumn('number', 'Chanel2');
+        data1.addColumn('number', 'Chanel3');
+
+        data2.addColumn('string', 'Minute' );
+        data2.addColumn('number', 'Chanel1');
+        data2.addColumn('number', 'Chanel2');
+        data2.addColumn('number', 'Chanel3');
+
+        data3.addColumn('string', 'Minute' );
+        data3.addColumn('number', 'Chanel1');
+        data3.addColumn('number', 'Chanel2');
+        data3.addColumn('number', 'Chanel3');
+
+        rows_chanelU.push(["{{rows_U.[0].[0]}}", {{rows_U.[0].[1]}},{{rows_U.[0].[2]}},{{rows_U.[0].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[1].[0]}}', {{rows_U.[1].[1]}},{{rows_U.[1].[2]}},{{rows_U.[1].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[2].[0]}}', {{rows_U.[2].[1]}},{{rows_U.[2].[2]}},{{rows_U.[2].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[3].[0]}}', {{rows_U.[3].[1]}},{{rows_U.[3].[2]}},{{rows_U.[3].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[4].[0]}}', {{rows_U.[4].[1]}},{{rows_U.[4].[2]}},{{rows_U.[4].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[5].[0]}}', {{rows_U.[5].[1]}},{{rows_U.[5].[2]}},{{rows_U.[5].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[6].[0]}}', {{rows_U.[6].[1]}},{{rows_U.[6].[2]}},{{rows_U.[6].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[7].[0]}}', {{rows_U.[7].[1]}},{{rows_U.[7].[2]}},{{rows_U.[7].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[8].[0]}}', {{rows_U.[8].[1]}},{{rows_U.[8].[2]}},{{rows_U.[8].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[9].[0]}}', {{rows_U.[9].[1]}},{{rows_U.[9].[2]}},{{rows_U.[9].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[10].[0]}}', {{rows_U.[10].[1]}},{{rows_U.[10].[2]}},{{rows_U.[10].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[11].[0]}}', {{rows_U.[11].[1]}},{{rows_U.[11].[2]}},{{rows_U.[11].[3]}}]);
+        rows_chanelU.push(["{{rows_U.[12].[0]}}", {{rows_U.[12].[1]}},{{rows_U.[12].[2]}},{{rows_U.[12].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[13].[0]}}', {{rows_U.[13].[1]}},{{rows_U.[13].[2]}},{{rows_U.[13].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[14].[0]}}', {{rows_U.[14].[1]}},{{rows_U.[14].[2]}},{{rows_U.[14].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[15].[0]}}', {{rows_U.[15].[1]}},{{rows_U.[15].[2]}},{{rows_U.[15].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[16].[0]}}', {{rows_U.[16].[1]}},{{rows_U.[16].[2]}},{{rows_U.[16].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[17].[0]}}', {{rows_U.[17].[1]}},{{rows_U.[17].[2]}},{{rows_U.[17].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[18].[0]}}', {{rows_U.[18].[1]}},{{rows_U.[18].[2]}},{{rows_U.[18].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[19].[0]}}', {{rows_U.[19].[1]}},{{rows_U.[19].[2]}},{{rows_U.[19].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[20].[0]}}', {{rows_U.[20].[1]}},{{rows_U.[20].[2]}},{{rows_U.[20].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[21].[0]}}', {{rows_U.[21].[1]}},{{rows_U.[21].[2]}},{{rows_U.[21].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[22].[0]}}', {{rows_U.[22].[1]}},{{rows_U.[22].[2]}},{{rows_U.[22].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[23].[0]}}', {{rows_U.[23].[1]}},{{rows_U.[23].[2]}},{{rows_U.[23].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[24].[0]}}', {{rows_U.[24].[1]}},{{rows_U.[24].[2]}},{{rows_U.[24].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[25].[0]}}', {{rows_U.[25].[1]}},{{rows_U.[25].[2]}},{{rows_U.[25].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[26].[0]}}', {{rows_U.[26].[1]}},{{rows_U.[26].[2]}},{{rows_U.[26].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[27].[0]}}', {{rows_U.[27].[1]}},{{rows_U.[27].[2]}},{{rows_U.[27].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[28].[0]}}', {{rows_U.[28].[1]}},{{rows_U.[28].[2]}},{{rows_U.[28].[3]}}]);
+        rows_chanelU.push(['{{rows_U.[29].[0]}}', {{rows_U.[29].[1]}},{{rows_U.[29].[2]}},{{rows_U.[29].[3]}}]);
+
+        rows_chanelI.push(["{{rows_I.[0].[0]}}", {{rows_I.[0].[1]}},{{rows_I.[0].[2]}},{{rows_I.[0].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[1].[0]}}', {{rows_I.[1].[1]}},{{rows_I.[1].[2]}},{{rows_I.[1].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[2].[0]}}', {{rows_I.[2].[1]}},{{rows_I.[2].[2]}},{{rows_I.[2].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[3].[0]}}', {{rows_I.[3].[1]}},{{rows_I.[3].[2]}},{{rows_I.[3].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[4].[0]}}', {{rows_I.[4].[1]}},{{rows_I.[4].[2]}},{{rows_I.[4].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[5].[0]}}', {{rows_I.[5].[1]}},{{rows_I.[5].[2]}},{{rows_I.[5].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[6].[0]}}', {{rows_I.[6].[1]}},{{rows_I.[6].[2]}},{{rows_I.[6].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[7].[0]}}', {{rows_I.[7].[1]}},{{rows_I.[7].[2]}},{{rows_I.[7].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[8].[0]}}', {{rows_I.[8].[1]}},{{rows_I.[8].[2]}},{{rows_I.[8].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[9].[0]}}', {{rows_I.[9].[1]}},{{rows_I.[9].[2]}},{{rows_I.[9].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[10].[0]}}', {{rows_I.[10].[1]}},{{rows_I.[10].[2]}},{{rows_I.[10].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[11].[0]}}', {{rows_I.[11].[1]}},{{rows_I.[11].[2]}},{{rows_I.[11].[3]}}]);
+        rows_chanelI.push(["{{rows_I.[12].[0]}}", {{rows_I.[12].[1]}},{{rows_I.[12].[2]}},{{rows_I.[12].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[13].[0]}}', {{rows_I.[13].[1]}},{{rows_I.[13].[2]}},{{rows_I.[13].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[14].[0]}}', {{rows_I.[14].[1]}},{{rows_I.[14].[2]}},{{rows_I.[14].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[15].[0]}}', {{rows_I.[15].[1]}},{{rows_I.[15].[2]}},{{rows_I.[15].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[16].[0]}}', {{rows_I.[16].[1]}},{{rows_I.[16].[2]}},{{rows_I.[16].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[17].[0]}}', {{rows_I.[17].[1]}},{{rows_I.[17].[2]}},{{rows_I.[17].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[18].[0]}}', {{rows_I.[18].[1]}},{{rows_I.[18].[2]}},{{rows_I.[18].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[19].[0]}}', {{rows_I.[19].[1]}},{{rows_I.[19].[2]}},{{rows_I.[19].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[20].[0]}}', {{rows_I.[20].[1]}},{{rows_I.[20].[2]}},{{rows_I.[20].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[21].[0]}}', {{rows_I.[21].[1]}},{{rows_I.[21].[2]}},{{rows_I.[21].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[22].[0]}}', {{rows_I.[22].[1]}},{{rows_I.[22].[2]}},{{rows_I.[22].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[23].[0]}}', {{rows_I.[23].[1]}},{{rows_I.[23].[2]}},{{rows_I.[23].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[24].[0]}}', {{rows_I.[24].[1]}},{{rows_I.[24].[2]}},{{rows_I.[24].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[25].[0]}}', {{rows_I.[25].[1]}},{{rows_I.[25].[2]}},{{rows_I.[25].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[26].[0]}}', {{rows_I.[26].[1]}},{{rows_I.[26].[2]}},{{rows_I.[26].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[27].[0]}}', {{rows_I.[27].[1]}},{{rows_I.[27].[2]}},{{rows_I.[27].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[28].[0]}}', {{rows_I.[28].[1]}},{{rows_I.[28].[2]}},{{rows_I.[28].[3]}}]);
+        rows_chanelI.push(['{{rows_I.[29].[0]}}', {{rows_I.[29].[1]}},{{rows_I.[29].[2]}},{{rows_I.[29].[3]}}]);
+
+
+        rows_chanelP.push(["{{rows_P.[0].[0]}}", {{rows_P.[0].[1]}},{{rows_P.[0].[2]}},{{rows_P.[0].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[1].[0]}}', {{rows_P.[1].[1]}},{{rows_P.[1].[2]}},{{rows_P.[1].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[2].[0]}}', {{rows_P.[2].[1]}},{{rows_P.[2].[2]}},{{rows_P.[2].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[3].[0]}}', {{rows_P.[3].[1]}},{{rows_P.[3].[2]}},{{rows_P.[3].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[4].[0]}}', {{rows_P.[4].[1]}},{{rows_P.[4].[2]}},{{rows_P.[4].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[5].[0]}}', {{rows_P.[5].[1]}},{{rows_P.[5].[2]}},{{rows_P.[5].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[6].[0]}}', {{rows_P.[6].[1]}},{{rows_P.[6].[2]}},{{rows_P.[6].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[7].[0]}}', {{rows_P.[7].[1]}},{{rows_P.[7].[2]}},{{rows_P.[7].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[8].[0]}}', {{rows_P.[8].[1]}},{{rows_P.[8].[2]}},{{rows_P.[8].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[9].[0]}}', {{rows_P.[9].[1]}},{{rows_P.[9].[2]}},{{rows_P.[9].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[10].[0]}}', {{rows_P.[10].[1]}},{{rows_P.[10].[2]}},{{rows_P.[10].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[11].[0]}}', {{rows_P.[11].[1]}},{{rows_P.[11].[2]}},{{rows_P.[11].[3]}}]);
+        rows_chanelP.push(["{{rows_P.[12].[0]}}", {{rows_P.[12].[1]}},{{rows_P.[12].[2]}},{{rows_P.[12].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[13].[0]}}', {{rows_P.[13].[1]}},{{rows_P.[13].[2]}},{{rows_P.[13].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[14].[0]}}', {{rows_P.[14].[1]}},{{rows_P.[14].[2]}},{{rows_P.[14].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[15].[0]}}', {{rows_P.[15].[1]}},{{rows_P.[15].[2]}},{{rows_P.[15].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[16].[0]}}', {{rows_P.[16].[1]}},{{rows_P.[16].[2]}},{{rows_P.[16].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[17].[0]}}', {{rows_P.[17].[1]}},{{rows_P.[17].[2]}},{{rows_P.[17].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[18].[0]}}', {{rows_P.[18].[1]}},{{rows_P.[18].[2]}},{{rows_P.[18].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[19].[0]}}', {{rows_P.[19].[1]}},{{rows_P.[19].[2]}},{{rows_P.[19].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[20].[0]}}', {{rows_P.[20].[1]}},{{rows_P.[20].[2]}},{{rows_P.[20].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[21].[0]}}', {{rows_P.[21].[1]}},{{rows_P.[21].[2]}},{{rows_P.[21].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[22].[0]}}', {{rows_P.[22].[1]}},{{rows_P.[22].[2]}},{{rows_P.[22].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[23].[0]}}', {{rows_P.[23].[1]}},{{rows_P.[23].[2]}},{{rows_P.[23].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[24].[0]}}', {{rows_P.[24].[1]}},{{rows_P.[24].[2]}},{{rows_P.[24].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[25].[0]}}', {{rows_P.[25].[1]}},{{rows_P.[25].[2]}},{{rows_P.[25].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[26].[0]}}', {{rows_P.[26].[1]}},{{rows_P.[26].[2]}},{{rows_P.[26].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[27].[0]}}', {{rows_P.[27].[1]}},{{rows_P.[27].[2]}},{{rows_P.[27].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[28].[0]}}', {{rows_P.[28].[1]}},{{rows_P.[28].[2]}},{{rows_P.[28].[3]}}]);
+        rows_chanelP.push(['{{rows_P.[29].[0]}}', {{rows_P.[29].[1]}},{{rows_P.[29].[2]}},{{rows_P.[29].[3]}}]);
+
+        rows_chanelF.push(["{{rows_F.[0].[0]}}", {{rows_F.[0].[1]}},{{rows_F.[0].[2]}},{{rows_F.[0].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[1].[0]}}', {{rows_F.[1].[1]}},{{rows_F.[1].[2]}},{{rows_F.[1].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[2].[0]}}', {{rows_F.[2].[1]}},{{rows_F.[2].[2]}},{{rows_F.[2].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[3].[0]}}', {{rows_F.[3].[1]}},{{rows_F.[3].[2]}},{{rows_F.[3].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[4].[0]}}', {{rows_F.[4].[1]}},{{rows_F.[4].[2]}},{{rows_F.[4].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[5].[0]}}', {{rows_F.[5].[1]}},{{rows_F.[5].[2]}},{{rows_F.[5].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[6].[0]}}', {{rows_F.[6].[1]}},{{rows_F.[6].[2]}},{{rows_F.[6].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[7].[0]}}', {{rows_F.[7].[1]}},{{rows_F.[7].[2]}},{{rows_F.[7].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[8].[0]}}', {{rows_F.[8].[1]}},{{rows_F.[8].[2]}},{{rows_F.[8].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[9].[0]}}', {{rows_F.[9].[1]}},{{rows_F.[9].[2]}},{{rows_F.[9].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[10].[0]}}', {{rows_F.[10].[1]}},{{rows_F.[10].[2]}},{{rows_F.[10].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[11].[0]}}', {{rows_F.[11].[1]}},{{rows_F.[11].[2]}},{{rows_F.[11].[3]}}]);
+        rows_chanelF.push(["{{rows_F.[12].[0]}}", {{rows_F.[12].[1]}},{{rows_F.[12].[2]}},{{rows_F.[12].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[13].[0]}}', {{rows_F.[13].[1]}},{{rows_F.[13].[2]}},{{rows_F.[13].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[14].[0]}}', {{rows_F.[14].[1]}},{{rows_F.[14].[2]}},{{rows_F.[14].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[15].[0]}}', {{rows_F.[15].[1]}},{{rows_F.[15].[2]}},{{rows_F.[15].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[16].[0]}}', {{rows_F.[16].[1]}},{{rows_F.[16].[2]}},{{rows_F.[16].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[17].[0]}}', {{rows_F.[17].[1]}},{{rows_F.[17].[2]}},{{rows_F.[17].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[18].[0]}}', {{rows_F.[18].[1]}},{{rows_F.[18].[2]}},{{rows_F.[18].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[19].[0]}}', {{rows_F.[19].[1]}},{{rows_F.[19].[2]}},{{rows_F.[19].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[20].[0]}}', {{rows_F.[20].[1]}},{{rows_F.[20].[2]}},{{rows_F.[20].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[21].[0]}}', {{rows_F.[21].[1]}},{{rows_F.[21].[2]}},{{rows_F.[21].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[22].[0]}}', {{rows_F.[22].[1]}},{{rows_F.[22].[2]}},{{rows_F.[22].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[23].[0]}}', {{rows_F.[23].[1]}},{{rows_F.[23].[2]}},{{rows_F.[23].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[24].[0]}}', {{rows_F.[24].[1]}},{{rows_F.[24].[2]}},{{rows_F.[24].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[25].[0]}}', {{rows_F.[25].[1]}},{{rows_F.[25].[2]}},{{rows_F.[25].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[26].[0]}}', {{rows_F.[26].[1]}},{{rows_F.[26].[2]}},{{rows_F.[26].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[27].[0]}}', {{rows_F.[27].[1]}},{{rows_F.[27].[2]}},{{rows_F.[27].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[28].[0]}}', {{rows_F.[28].[1]}},{{rows_F.[28].[2]}},{{rows_F.[28].[3]}}]);
+        rows_chanelF.push(['{{rows_F.[29].[0]}}', {{rows_F.[29].[1]}},{{rows_F.[29].[2]}},{{rows_F.[29].[3]}}]);
+
+        //rows_chanelU.push[];
+        data.addRows(rows_chanelU);
+        data1.addRows(rows_chanelI);
+        data2.addRows(rows_chanelP);
+        data3.addRows(rows_chanelF);
+        //console.log(rows_chanelU);
+
+        var options = {
+            title: 'Điện áp (V)',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+        var options1 = {
+            title: 'Dòng điện (A)',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+        var options2 = {
+            title: 'Công suất (W)',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+        var options3 = {
+            title: 'Tần số (Hz)',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart1 = new google.visualization.LineChart(document.getElementById('current_chart'));
+        var chart2 = new google.visualization.LineChart(document.getElementById('power_chart'));
+        var chart3 = new google.visualization.LineChart(document.getElementById('hertz_chart'));
+
+        chart.draw(data, options);
+        chart1.draw(data1, options1);
+        chart2.draw(data2, options2);
+        chart3.draw(data3, options3);
+    }
+    function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = new google.visualization.DataTable();
+        var row_cbchart = new Array();
+        var newdate=new Date().toISOString();
+        var s1=newdate.substr(0, 5);
+        var th=newdate.substr(5, 2);
+        var th1 = th-1;
+        var th2 = th-2;
+        var th3 = th-3;
+        var th4 = th-4;
+
+        data.addColumn('string', 'Month' );
+        data.addColumn('number', 'Chanel1');
+        data.addColumn('number', 'Chanel2');
+        data.addColumn('number', 'Chanel3');
+        row_cbchart.push([s1+th4, 598,      440,         414.6]);
+        row_cbchart.push([s1+th3, 600,      415,        482]);
+        row_cbchart.push([s1+th2,  620,      420,        423]);
+        row_cbchart.push([s1+th1, 620,      420,        423]);
+        row_cbchart.push([s1+th, 691,      336,         496.6]);
+
+        data.addRows(row_cbchart);
+
+        var options = {
+            title : 'Công suất 5 tháng gần nhất của mỗi chanel',
+            vAxis: {title: 'KW/h'},
+            hAxis: {title: 'Month'},
+            seriesType: 'bars',
+            series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+    $(function() {
+        $('#toggle-event').change(function() {
+            $('#console-event').html('Toggle: ' + $(this).prop('checked'))
+        })
+    })
+</script>
